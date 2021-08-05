@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
 router.post('/', async (req, res, next) => {
   await User.register(new User({ username: req.body.username }), req.body.password, (err, account) => {
     if (err) {
-      // next(err);
       res.render('register', { info: 'Usuário já existe!' });
     } else {
       passport.authenticate('local')(req, res, () => {

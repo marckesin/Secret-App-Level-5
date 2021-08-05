@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
     if (req.isAuthenticated()) {
         User.findOne({ username: req.user.username }, (err, result) => {
             if (!err && result) {
-                res.render('credentials');
+                res.render('credentials', { credentials: result });
             } else {
                 next(err);
             }
