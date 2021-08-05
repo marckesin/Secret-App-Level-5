@@ -20,6 +20,10 @@ input[type=password]:not(:focus):invalid {
   background-image: linear-gradient(180deg, #66fcf1, #0b0c10);
 }
 
+.material-icons.md-18 { 
+  font-size: 18px; 
+}
+
 .registrar{
   margin: 7rem 20rem 0;
   padding: 1rem;

@@ -6,12 +6,22 @@
             <div class="col-lg-6 col-sm-10 mx-auto">
                 <form action="/register" method="POST">
                     <section class="mb-3">
-                        <label for="email" class="form-label text-sand">Email</label>
-                        <input type="email" class="form-control" name="username" autocomplete="username" required
-                            autofocus>
+                        <div class="d-flex justify-content-between">
+                            <label for="email" class="form-label text-sand">Email</label>
+                            <div class="d-flex">
+                                <% if (info) { %>
+                                    <span class="material-icons text-danger">error_outline</span>
+                                    <p class="text-danger ms-1 m-0">
+                                        <%= info %>
+                                            <% } %>
+                                    </p>
+                            </div>
+                        </div>
+                        <input type="email" class="form-control" name="username" id="email" autocomplete="username"
+                            required autofocus>
                     </section>
                     <section class="mb-3">
-                        <label for="password" class="form-label text-sand">Password</label>
+                        <label for="inputPass" class="form-label text-sand">Password</label>
                         <input type="password" class="form-control" id="inputPass" name="password"
                             autocomplete="new-password" minlength="4" required>
                     </section>
@@ -19,18 +29,13 @@
                         <input class="form-check-input" type="checkbox" value="" id="showPass">
                         <label class="form-check-label text-sand" for="showPass">mostrar senha</label>
                     </section>
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex">
                         <a class="btn btn-lg btn-outline-light" href="/" role="button">Voltar</a>
                         <button type="submit" class="btn btn-lg btn-warning mx-2">Registrar</button>
                     </div>
-                    <p class="lead text-white text-center">
-                        <% if (info) { %>
-                            <%= info %>
-                                <% } %>
-                    </p>
                 </form>
             </div>
         </div>
     </div>
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>
