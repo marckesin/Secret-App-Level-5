@@ -1,0 +1,50 @@
+:root{
+  --bs-green: #5cdb95;
+  --bs-sand: #edf5e1;
+  --bs-darkblue: #05386b;
+}
+
+body {
+  background-color: #E8ECEF;
+}
+
+i{
+  color: var(--bs-darkblue);
+}
+
+input[type=email]:invalid{
+  color: crimson;
+}
+
+.bg-green{
+  background-color: var(--bs-green);
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+
+.registrar{
+  margin: 7rem 20rem 0;
+  padding: 1rem;
+}
+
+.text-sand{
+  color: var(--bs-sand);
+}
+
+@media(max-width: 576px) {
+  .registrar{
+    margin: 4rem 4rem 0;
+    padding: 1rem;
+  }
+
+}
