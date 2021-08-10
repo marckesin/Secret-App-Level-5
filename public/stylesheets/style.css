@@ -16,6 +16,11 @@ input[type=password]:not(:focus):invalid {
   outline-color: red;
 }
 
+input[type=email]:valid,
+input[type=password]:valid {
+  background-color: #d2f8d2;
+}
+
 .bg-darkgreen{
   background-image: linear-gradient(180deg, #66fcf1, #0b0c10);
 }
@@ -33,7 +38,7 @@ input[type=password]:not(:focus):invalid {
   color: var(--bs-sand);
 }
 
-@media(max-width: 850px) {
+@media(max-width: 950px) {
   .registrar{
     margin: 7rem 8rem 0;
     padding: 1rem;
@@ -42,7 +47,7 @@ input[type=password]:not(:focus):invalid {
 
 @media(max-width: 576px) {
   .registrar{
-    margin: 4rem 4rem 0;
+    margin: 4rem 2rem 0;
     padding: 1rem;
   }
 }
