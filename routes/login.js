@@ -13,13 +13,15 @@ router.post('/', (req, res, next) => {
         }
         else if (!user) {
             res.render('login', { info: "Email ou senha inválidos!" });
+        } else {
+            req.logIn(user, (err) => {
+                if (!err) {
+                    res.redirect('/secrets');
+                } else {
+                    next(err);
+                }
+            });
         }
-        req.logIn(user, (err) => {
-            if (err) {
-                next(err);
-            }
-            res.redirect('/secrets');
-        });
     })(req, res, next);
 });
 
